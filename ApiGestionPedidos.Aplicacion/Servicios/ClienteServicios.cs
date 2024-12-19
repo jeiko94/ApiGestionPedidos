@@ -8,7 +8,7 @@ namespace ApiGestionPedidos.Aplicacion.Servicios
     //Servico de aplicación para manejar la logica relacionado con Clientes
     public class ClienteServicios
     {
-        private readonly IClienteRepositorio? _clienteRepositorio;
+        private readonly IClienteRepositorio _clienteRepositorio;
 
         //Constructor que recive el repositorio Clientes (puerto).
         public ClienteServicios(IClienteRepositorio clienteRepositorio)

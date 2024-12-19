@@ -21,7 +21,7 @@ namespace ApiGestionPedidos.Dominio.Models
         public decimal PrecioUnitario { get; set; }
 
         //Propiedad de navegación al pedido
-        public Pedido? pedido { get; set; }
+        public Pedido? Pedido { get; set; }
 
         //Propiedad de navegación al producto
         public Producto? Producto { get; set; }

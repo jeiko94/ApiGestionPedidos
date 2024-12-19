@@ -110,7 +110,7 @@ namespace ApiGestionPedidos.Aplicacion.Servicios
             await _pedidoRepositorio.ActualizarAsync(pedido);
         }
 
-        //Cambiar el estado dl pedido a entregado
+        //Cambiar el estado del pedido a entregado
         public async Task EntregarPedidoAsync(int pedidoId)
         {
             var pedido = await _pedidoRepositorio.ObtenerPorIdAsync(pedidoId);
