@@ -11,8 +11,4 @@
     <ProjectReference Include="..\ApiGestionPedidos.Dominio\ApiGestionPedidos.Dominio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Servicios\" />
-  </ItemGroup>
-
 </Project>
