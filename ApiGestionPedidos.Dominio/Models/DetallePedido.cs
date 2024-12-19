@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApiGestionPedidos.Dominio.Models
 {
@@ -18,6 +19,7 @@ namespace ApiGestionPedidos.Dominio.Models
         //Precio unitario del producto al momento de crear el pedido.
         //Esto permite mantener el historico de precios.
         [Range(0.01, double.MaxValue, ErrorMessage = "El precio debe ser mayor a 0.")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal PrecioUnitario { get; set; }
 
         //Propiedad de navegación al pedido

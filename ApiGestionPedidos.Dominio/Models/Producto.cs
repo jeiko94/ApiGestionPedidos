@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApiGestionPedidos.Dominio.Models
 {
@@ -14,6 +15,7 @@ namespace ApiGestionPedidos.Dominio.Models
 
         //Precio unitario del producto
         [Range(0.01, double.MaxValue, ErrorMessage = "El precio debe ser mayor a 0.")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Precio { get; set; }
 
         //Strock disponible del producto

@@ -35,6 +35,15 @@ namespace ApiGestionPedidos.Infraestructura.Data
             modelBuilder.Entity<DetallePedido>()
                 .HasKey(d => new { d.PedidoId, d.ProductoId });
 
+            modelBuilder.Entity<Producto>()
+                .Property(p => p.Precio)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<DetallePedido>()
+                .Property(d => d.PrecioUnitario)
+                .HasPrecision(18, 2);
+
+
             // Relación uno a muchos: Pedido -> DetallePedido
             modelBuilder.Entity<DetallePedido>()
                 .HasOne(d => d.Pedido)
