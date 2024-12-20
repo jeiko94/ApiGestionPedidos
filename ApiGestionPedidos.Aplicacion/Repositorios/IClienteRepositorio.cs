@@ -9,7 +9,7 @@ namespace ApiGestionPedidos.Aplicacion.Repositorios
         Task CrearAsync(Cliente cliente);
 
         //Obtiene un cliente por su Id
-        Task<Cliente> ObtenerPorIdAsync(int Id);
+        Task<Cliente> ObtenerPorIdAsync(int id);
 
         //Obtiene un cliente por su email
         //email = del cliente
@@ -20,6 +20,6 @@ namespace ApiGestionPedidos.Aplicacion.Repositorios
         Task ActualizarAsync(Cliente cliente);
 
         //Elimina un cliente por su Id
-        Task EliminarAsync(int Id);
+        Task EliminarAsync(int id);
     }
 }
