@@ -1,4 +1,7 @@
+using ApiGestionPedidos.Aplicacion.Repositorios;
+using ApiGestionPedidos.Aplicacion.Servicios;
 using ApiGestionPedidos.Infraestructura.Data;
+using ApiGestionPedidos.Infraestructura.Repositorios;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +15,15 @@ builder.Services.AddDbContext<AplicacionDbContext>(options =>
     )
 );
 
+//Registrar los repositorios concretos de infraestructura 
+builder.Services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
+builder.Services.AddScoped<IProductoRepositorio, ProductoRepositorio>();
+builder.Services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
 
+//Registrar los servicios de aplicación
+builder.Services.AddScoped<ClienteServicios>();
+builder.Services.AddScoped<ProductoServicios>();
+builder.Services.AddScoped<PedidoServicio>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
