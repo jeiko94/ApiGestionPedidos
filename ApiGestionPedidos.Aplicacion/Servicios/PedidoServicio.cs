@@ -71,7 +71,7 @@ namespace ApiGestionPedidos.Aplicacion.Servicios
             pedido.Detalles.Add(detalle);
 
             //Actualizar pedido en repositorio
-            await _pedidoRepositorio.CrearAsync(pedido);
+            await _pedidoRepositorio.ActualizarAsync(pedido);
         }
 
         //Cambiar el estado del pedido a confirmado y ajustar el stock de los productos.
