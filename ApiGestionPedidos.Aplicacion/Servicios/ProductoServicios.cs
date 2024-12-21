@@ -27,9 +27,9 @@ namespace ApiGestionPedidos.Aplicacion.Servicios
         }
 
         //Obtiene un producto por su id
-        public async Task ObtenerProductoAsync(int id)
+        public async Task<Producto> ObtenerProductoAsync(int id)
         {
-            await _productoRepositorio.ObtenerPorIdAsync(id);
+            return await _productoRepositorio.ObtenerPorIdAsync(id);
         }
 
         //Listar todos los productos del sistema

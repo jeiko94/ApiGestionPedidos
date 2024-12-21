@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ApiGestionPedidos.Aplicacion\ApiGestionPedidos.Aplicacion.csproj" />
     <ProjectReference Include="..\ApiGestionPedidos.Infraestructura\ApiGestionPedidos.Infraestructura.csproj" />
   </ItemGroup>
