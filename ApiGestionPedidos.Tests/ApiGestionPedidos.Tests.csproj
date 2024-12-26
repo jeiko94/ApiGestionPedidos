@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApiGestionPedidos.Aplicacion\ApiGestionPedidos.Aplicacion.csproj" />
     <ProjectReference Include="..\ApiGestionPedidos.Dominio\ApiGestionPedidos.Dominio.csproj" />
   </ItemGroup>
 
