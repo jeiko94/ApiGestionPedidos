@@ -87,5 +87,18 @@ namespace ApiGestionPedidos.Aplicacion.Servicios
             await _clienteRepositorio.EliminarAsync(id);
         }
 
+        //Autenticacion de cliente JWT
+        public async Task<Cliente> AutenticarClienteAsync(string email, string passwordClaro)
+        {
+            //Hashear la contraseña
+            string passwordHashed = HashPassword(passwordClaro);
+            //Buscar cliente por email y contraseña
+            var cliente = await _clienteRepositorio.ObtenerPorEmailAsync(email);
+            if (cliente == null || cliente.PasswordHashed != passwordHashed)
+            {
+                throw new InvalidOperationException("Email o contraseña incorrectos.");
+            }
+            return cliente;
+        }
     }
 }
