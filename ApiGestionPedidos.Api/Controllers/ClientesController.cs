@@ -1,5 +1,6 @@
 ﻿using ApiGestionPedidos.Api.DTOs;
 using ApiGestionPedidos.Aplicacion.Servicios;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiGestionPedidos.Api.Controllers
@@ -36,6 +37,7 @@ namespace ApiGestionPedidos.Api.Controllers
             }
         }
 
+        [Authorize]
         //Obtener un cliente por id
         //GET api/clientes/{id}
         [HttpGet("{id}")]

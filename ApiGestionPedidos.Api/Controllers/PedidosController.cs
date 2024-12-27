@@ -1,10 +1,12 @@
 ﻿using ApiGestionPedidos.Api.DTOs;
 using ApiGestionPedidos.Aplicacion.Servicios;
 using ApiGestionPedidos.Dominio.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiGestionPedidos.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PedidosController : ControllerBase
